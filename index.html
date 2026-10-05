@@ -250,6 +250,64 @@
   .stars{ position:absolute; pointer-events:none; font-size:clamp(18px,2vw,30px); color:var(--sun); opacity:.9; }
   .kid{ position:absolute; bottom:-1vh; left:3vw; width:clamp(160px,22vw,340px); pointer-events:none; opacity:.95; }
   @media (max-width:820px){ .g3,.g4,.faq,.steps,.price{ grid-template-columns:repeat(2,1fr);} .two{ grid-template-columns:1fr;} .day{ grid-template-columns:repeat(4,1fr);} .slide{ padding:5vh 5vw; justify-content:flex-start; overflow:auto; } .kid{ display:none; } }
+
+  /* ===================== الثيم الفاتح ===================== */
+  html,body{ background:#EDEFEA; }
+  .slide{ background:#FCFBF7; }
+  .warm{ background:linear-gradient(160deg,#FCFBF7 0%,#FBF4E6 70%,#FBEDE3 100%); }
+  .dark{ background:linear-gradient(165deg,#F5FBFA 0%,#EAF6F3 60%,#E1F1EE 100%); color:var(--ink); }
+  .dark h1,.dark h2{ color:var(--teal-d); }
+  .dark .eyebrow{ color:var(--coral); }
+  .dark .lead{ color:var(--muted); }
+  .dark .dots{ color:var(--teal); opacity:.07; }
+  .dark .card{ background:#fff; color:var(--ink); border:1px solid #DDEEEA; box-shadow:0 18px 50px -34px rgba(15,94,88,.45); }
+  .dark .card h3{ color:var(--teal-d); } .dark .card p{ color:var(--muted); }
+  .dark .ico{ background:var(--sky); color:var(--teal-d); }
+  .dark .num{ color:var(--teal); }
+  .dark .punch{ background:var(--teal-d); color:#fff; }
+  .dark .fill{ background:#fff1e0; color:#9a3412; border-color:var(--coral); }
+  .dark .chips span{ background:#fff; color:var(--teal-d); border:2px solid #CFE9E4; }
+  .brand{ color:var(--teal-d); }
+  /* الغلاف والختام */
+  .dark .howto div{ color:var(--teal-d); } .howto .link{ color:var(--coral); }
+  .qrcard{ box-shadow:0 0 0 6px var(--sun), 0 30px 60px -36px rgba(15,94,88,.5); }
+  /* خمس جهات */
+  .hub .node{ background:#fff; border:1px solid #DDEEEA; box-shadow:0 14px 34px -28px rgba(15,94,88,.5); }
+  .hub .node b{ color:var(--teal-d); } .hub .node span{ color:var(--muted); }
+  .fan g{ stroke:var(--teal); }
+  /* المسارات */
+  .cols5 div{ background:#fff; border:1px solid #DDEEEA; border-bottom:none; }
+  .cols5 b{ color:var(--teal-d); } .cols5 span{ color:var(--muted); } .cols5 i{ background:#FFF1CC; }
+  /* القياس */
+  .cad b{ color:var(--teal-d); } .cad span{ color:var(--muted); }
+  .cad::before{ background:repeating-linear-gradient(90deg,var(--teal) 0 10px,transparent 10px 18px); opacity:.5; }
+  /* مقارنة السوق */
+  .mrow{ background:#fff; border:1px solid #DDEEEA; }
+  .mrow b{ color:var(--ink); } .mrow small{ color:var(--muted); } .mrow em{ color:var(--teal-d); }
+  .mrow.total{ background:#FFF1CC; border-color:var(--sun); } .mrow.total b,.mrow.total em{ color:#3a2a00; }
+  .mbar.sum > b{ color:var(--coral); } .mbar.nab > b{ color:var(--teal-d); }
+  .mbar.sum .col{ background:linear-gradient(180deg,#F7A892,#EE8166); }
+  .mbar.nab .col{ background:linear-gradient(180deg,#5CC9BC,var(--teal)); color:#fff; }
+  .mref{ color:var(--muted); } .mref b{ color:var(--ink); }
+  .msave{ background:#fff; border:2px solid var(--sun); color:var(--teal-d); } .msave em{ color:var(--coral); }
+  /* الفريق */
+  .team > div{ background:#fff; border:1px solid #DDEEEA; box-shadow:0 14px 34px -28px rgba(15,94,88,.5); }
+  .team b{ color:var(--teal-d); } .team span{ color:var(--muted); } .team i{ background:#FFF1CC; }
+  .trust > div{ background:#fff; border:1px solid #DDEEEA; } .trust b{ color:var(--teal-d); } .trust span{ color:var(--muted); }
+  /* ألوان أهدأ للعناصر الصلبة */
+  .comfort{ background:#E6F4F1; color:var(--teal-d); } .comfort span{ background:#fff; }
+  .when,.one{ color:var(--ink); }
+  .stairs div:nth-child(1){ background:linear-gradient(180deg,#8FDCD2,#5CC9BC); }
+  .stairs div:nth-child(2){ background:linear-gradient(180deg,#5CC9BC,var(--teal)); }
+  .stairs div:nth-child(3){ background:linear-gradient(180deg,var(--teal),var(--teal-d)); }
+  .notes{ background:#12302dee; }
+  .stairs div:nth-child(1), .stairs div:nth-child(2){ color:var(--teal-x); }
+  .stairs div:nth-child(1) b, .stairs div:nth-child(2) b{ color:var(--teal-d); }
+  .stairs div:nth-child(1) small, .stairs div:nth-child(2) small{ color:#124a45; }
+  .stairs div:nth-child(1){ background:linear-gradient(180deg,#CDEFEA,#A9E2DA); }
+  .stairs div:nth-child(2){ background:linear-gradient(180deg,#A9E2DA,#7FD3C8); }
+  .stars{ color:#EBC66A; opacity:.7; }
+  .kid g{ stroke:var(--teal); } 
 </style>
 </head>
 <body>
@@ -618,7 +676,7 @@
 </section>
 
 <!-- 18 الختام -->
-<section class="slide dark" data-notes="أعد السؤال الأول ببطء. ثم: الرابط أمامكم الآن، وفريقنا عند الباب يساعدكم. لا تُنهِ بشكر طويل؛ أنهِ بالدعوة. أهم رقم اليوم: كم أسرة تعبّئ الرابط قبل أن تغادر.">
+<section class="slide dark" data-notes="أعد السؤال الأول ببطء. ثم: الرابط أمامكم الآن. لا تُنهِ بشكر طويل؛ أنهِ بالدعوة. أهم رقم اليوم: كم أسرة تعبّئ الرابط قبل أن تغادر.">
   <div class="dots"></div>
   <div class="blob" style="left:-8vw;top:-16vh;width:30vw;height:30vw;background:rgba(246,196,83,.18)"></div>
   <span class="eyebrow">والآن</span>
@@ -629,7 +687,7 @@
       <div><em>2</em>امسح الرمز</div>
       <div><em>3</em>أجب في 5 دقائق</div>
       <p class="link" data-k="link_text">〔ضع الرابط في الإعدادات أعلى الملف〕</p>
-      <p class="lead" style="margin:0">فريقنا عند الباب يساعد من أراد · للتواصل: <span data-k="phone" class="fill">〔الجوال〕</span></p>
+      <p class="lead" style="margin:0">للتواصل: <span data-k="phone" class="fill">〔الجوال〕</span></p>
     </div>
     <div class="qrcard"><div class="qr" id="qr">ضع رابط الفرز في الإعدادات ليظهر رمز QR هنا</div><b>سجّل رغبة ابنك الآن</b></div>
   </div>
