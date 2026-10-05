@@ -301,6 +301,13 @@
   .stairs div:nth-child(2){ background:linear-gradient(180deg,#5CC9BC,var(--teal)); }
   .stairs div:nth-child(3){ background:linear-gradient(180deg,var(--teal),var(--teal-d)); }
   .notes{ background:#12302dee; }
+  .duo.trio{ grid-template-columns:repeat(3,1fr); gap:1.4vw; }
+  .trio .side{ padding:2vh 1.4vw; }
+  .trio .say{ font-size:clamp(15px,1.65vw,25px); }
+  .trio .ticks{ font-size:clamp(13px,1.28vw,20px); line-height:2.05; }
+  .side.prog{ border-top:8px solid var(--sun); } .prog .say{ color:#8a6100; }
+  .prog .ticks li::before{ background:#FFF1CC; color:#8a6100; }
+  .dad .ticks li::before{ background:var(--sky); color:var(--teal-d); }
   .stairs div:nth-child(1), .stairs div:nth-child(2){ color:var(--teal-x); }
   .stairs div:nth-child(1) b, .stairs div:nth-child(2) b{ color:var(--teal-d); }
   .stairs div:nth-child(1) small, .stairs div:nth-child(2) small{ color:#124a45; }
@@ -431,29 +438,41 @@
 </section>
 
 <!-- 6 ما تريده الأسرة -->
-<section class="slide" data-notes="شريحة «فهمناكم». اقرأ الجملة الأولى بدفء ثم بنودها: راحة الابن أولًا. ثم الجملة الثانية والأرقام الأربعة فقط بلا تعليق. الرسالة: نعرف ما يقلق الأسرة وما تسأل عنه، وعندنا جواب الاثنين.">
+<section class="slide" data-notes="شريحة «فهمناكم». ثلاثة أعمدة: راحة الابن، ثم البرامج التي يعيشها، ثم ما يخرج به. اقرأ العمود الأول بدفء، ومرّ على الثاني بسرعة، وتوقّف عند الثالث: هذه نتائج تُرى وتُقاس. الرسالة: نعرف ما يقلق الأسرة وما تطمح إليه، وعندنا جواب الاثنين.">
   <span class="eyebrow">فهمناكم</span>
   <h2>ما تريده الأسرة</h2>
-  <div class="duo">
+  <div class="duo trio">
     <div class="side mom">
-      <div class="say"><i>🏡</i>«نريده سعيدًا، آمنًا، قريبًا من الله»</div>
+      <div class="say"><i>🏡</i>«نريده سعيدًا وآمنًا»</div>
       <ul class="ticks">
         <li>أولويتنا الأولى للصغار: أن يحبّ المكان.</li>
         <li>صفر واجبات منزلية. المساء للأسرة.</li>
         <li>قيلولة يومية، ونوم 9 ساعات نتابعه معكم.</li>
-        <li>مربٍّ يتابعه كل يوم، ويخبركم عنه كل خميس.</li>
-        <li>علامة نجاحنا: يأتي فرحًا، ويحزن إن غاب.</li>
+        <li>مربٍّ يتابعه كل يوم، ويخبركم كل خميس.</li>
+        <li>ترفيه تربوي ورحلات تجعله يشتاق للمكان.</li>
+      </ul>
+    </div>
+    <div class="side prog">
+      <div class="say"><i>📚</i>«ونريد له برامج تبنيه»</div>
+      <ul class="ticks">
+        <li>حلقة قرآن يومية بخطة حفظ فردية.</li>
+        <li>تأسيس علمي: عقيدة وفقه وحديث وسيرة.</li>
+        <li>دراسة نظامية بمنهج كامبردج في المدرسة.</li>
+        <li>مهارات العصر: تقنية وذكاء اصطناعي.</li>
+        <li>إلقاء وقيادة وعمل جماعي وتفكير سليم.</li>
+        <li>مشروعات يصنعها بيده، ومعرض كل فصل.</li>
       </ul>
     </div>
     <div class="side dad">
-      <div class="say"><i>📋</i>«ونريد أن نعرف: ماذا سيحصل عليه بالضبط؟»</div>
-      <div class="stats">
-        <div><b>≈500</b><span>ساعة قرآن في السنة</span></div>
-        <div><b>10–15</b><span>طالبًا لكل معلّم</span></div>
-        <div><b>85%</b><span>حدّ الإتقان قبل الاعتماد</span></div>
-        <div><b>كل خميس</b><span>تقرير مكتوب للأسرة</span></div>
-      </div>
-      <p class="foot">ومتابعة لتحصيله الدراسي مع معلّميه، وتدخّل مبكر عند أي تراجع.</p>
+      <div class="say"><i>🏅</i>«ونريد نتائج نراها»</div>
+      <ul class="ticks">
+        <li>يختم القرآن خلال سنة إلى ثلاث سنوات.</li>
+        <li>نحو 500 ساعة قرآن في السنة الواحدة.</li>
+        <li>لا يُعتمد له محفوظ قبل إتقان 85%.</li>
+        <li>تفوّق دراسي، ومتابعة لتحصيله أسبوعيًا.</li>
+        <li>خُلق يُرصد: قيمة كل شهر تصير سلوكًا.</li>
+        <li>تقرير مكتوب عنه بين أيديكم كل خميس.</li>
+      </ul>
     </div>
   </div>
 </section>
