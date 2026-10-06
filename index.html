@@ -301,6 +301,10 @@
   .stairs div:nth-child(2){ background:linear-gradient(180deg,#5CC9BC,var(--teal)); }
   .stairs div:nth-child(3){ background:linear-gradient(180deg,var(--teal),var(--teal-d)); }
   .notes{ background:#12302dee; }
+  .numrow{ display:grid; grid-template-columns:repeat(7,1fr); gap:.8vw; margin-top:2.4vh; }
+  .numrow div{ background:#fff; border:1px solid #EADFCC; border-radius:18px; padding:1.1vh .4vw; text-align:center; }
+  .numrow b{ display:block; font-family:'Baloo Bhaijaan 2',sans-serif; font-weight:800; font-size:clamp(20px,2.3vw,36px); color:var(--teal); line-height:1.15; }
+  .numrow span{ font-size:clamp(10px,.95vw,14px); color:var(--muted); line-height:1.4; display:block; }
   .duo.trio{ grid-template-columns:repeat(3,1fr); gap:1.4vw; }
   .trio .side{ padding:2vh 1.4vw; }
   .trio .say{ font-size:clamp(15px,1.65vw,25px); }
@@ -336,7 +340,7 @@
   <span class="eyebrow">مدارس الساحل الأهلية تقدّم · برنامج نابغة الإثرائي · اللقاء التعريفي</span>
   <h1>ما المانع أن يكون ابننا هكذا؟</h1>
   <div class="chips" style="margin-top:3vh">
-    <span>يبدأ يومه بالقرآن</span><span>يحفظ بإتقان ويثبّت</span><span>يحصل على نسب عالية في دراسته</span><span>يحقّق مراكز وبطولات</span><span>يتميّز عن أقرانه</span><span>يتكلم أمام الناس بثقة</span><span>يكتسب مكارم الأخلاق</span>
+    <span>يبدأ يومه بالقرآن</span><span>يحفظ بإتقان ويثبّت</span><span>يحصل على نسب عالية في دراسته</span><span>يشارك في المسابقات</span><span>يتميّز عن أقرانه</span><span>يتكلم أمام الناس بثقة</span><span>يكتسب مكارم الأخلاق</span>
   </div>
   <p class="lead" style="margin-top:2vh"><span data-k="date" class="fill">〔التاريخ〕</span> · <span data-k="place" class="fill">〔المكان〕</span></p>
   <svg class="kid" viewBox="0 0 200 180" aria-hidden="true"><g fill="none" stroke="#F6C453" stroke-width="4" stroke-linecap="round"><circle cx="100" cy="58" r="30"/><path d="M60 170c0-34 18-54 40-54s40 20 40 54"/><path d="M78 52q22-22 44 0"/><path d="M90 66q10 8 20 0"/></g><path d="M140 110l30-12M150 125l32-4" stroke="#EE6A4D" stroke-width="4" stroke-linecap="round"/><path d="M28 120h22v30H28z" fill="none" stroke="#CFF0EC" stroke-width="4"/><path d="M28 120l11-6 11 6" fill="none" stroke="#CFF0EC" stroke-width="4"/></svg>
@@ -359,7 +363,7 @@
       <ul class="list" style="font-size:clamp(14px,1.3vw,20px);line-height:1.85">
         <li>أن يكون من الأوائل في فصله.</li>
         <li>أن تفتح شهادته فتفخر، لا أن تقلق.</li>
-        <li>أن يعود بمركز من مسابقة، لا بعذر.</li>
+        <li>أن يشارك في المسابقات بثقة.</li>
         <li>أن يحبّ التعلّم، لا أن يُساق إليه.</li>
       </ul></div>
     <div class="card pop"><div class="ico">🚀</div><h3>في مهاراته</h3>
@@ -408,7 +412,7 @@
   <div class="daybar">
     <span style="flex:3.5;background:#1B9A8F">📗 القرآن</span>
     <span style="flex:3.25;background:#0F5E58">🏫 الدراسة</span>
-    <span style="flex:1.3;background:#F6C453;color:#2b2b2b">🍽️ غداء وقيلولة</span>
+    <span style="flex:1.3;background:#F6C453;color:#2b2b2b">🍽️ الغداء</span>
     <span style="flex:2;background:#EE6A4D">🧠 مهارات</span>
     <span style="flex:2.2;background:#8B7FD1">💛 علمي وتربوي وترفيه</span>
     <span style="flex:2;background:#fff;color:#0F5E58;border:2px dashed #1B9A8F">🏠 المساء للأسرة</span>
@@ -426,7 +430,7 @@
       <ul class="ticks">
         <li>أولويتنا الأولى للصغار: أن يحبّ المكان.</li>
         <li>صفر واجبات منزلية. المساء للأسرة.</li>
-        <li>قيلولة يومية، ونوم 9 ساعات نتابعه معكم.</li>
+        <li>نوم 9 ساعات نتابعه معكم شهريًا.</li>
         <li>مربٍّ يتابعه كل يوم، ويخبركم كل خميس.</li>
         <li>رحلات وأنشطة تجعله يشتاق للمكان.</li>
         <li>أصحاب صالحون يكبر بينهم.</li>
@@ -478,32 +482,38 @@
 <!-- 8 يوم الطالب -->
 <section class="slide" data-notes="أخطر شريحة: طول اليوم يقلق الأمهات فورًا. امشِ على الخط بسرعة، ثم انتقل مباشرة للشريط الداكن: بنينا اليوم على راحة ابنك قبل أن نبنيه على الحصص.">
   <span class="eyebrow">الأحد إلى الخميس · 6:00 صباحًا – 6:00 مساءً</span>
-  <h2>يوم ابنك في نابغة</h2>
+  <h2>يوم ابنك في الساحل</h2>
   <div class="tl">
     <div class="seg" style="flex:3.5;--c:#1B9A8F"><i>📗</i><b>القرآن</b><span>6:00 · حلقة: مراجعة ثم جديد</span></div>
     <div class="seg" style="flex:1.3;--c:#F6C453"><i>🥪</i><b>فطور</b><span>9:30</span></div>
     <div class="seg" style="flex:3.25;--c:#0F5E58"><i>🏫</i><b>الدراسة</b><span>في فصول مدارس الساحل حتى 12:45</span></div>
-    <div class="seg" style="flex:1.9;--c:#7CC8BF"><i>🍽️</i><b>غداء وقيلولة</b><span>قيلولة إلزامية</span></div>
+    <div class="seg" style="flex:1.6;--c:#7CC8BF"><i>🍽️</i><b>الغداء</b><span>واستراحة</span></div>
     <div class="seg" style="flex:2;--c:#EE6A4D"><i>🧠</i><b>مهارات</b><span>ومشروعات</span></div>
     <div class="seg" style="flex:2.4;--c:#8B7FD1"><i>💛</i><b>علمي وتربوي</b><span>وترفيه هادف</span></div>
     <div class="seg" style="flex:1.6;--c:#3B4B59"><i>🏠</i><b>6:00 م</b><span>انصراف الجميع</span></div>
   </div>
-  <div class="tlbar"><span style="flex:3.5;background:#1B9A8F"></span><span style="flex:1.3;background:#F6C453"></span><span style="flex:3.25;background:#0F5E58"></span><span style="flex:1.9;background:#7CC8BF"></span><span style="flex:2;background:#EE6A4D"></span><span style="flex:2.4;background:#8B7FD1"></span><span style="flex:1.6;background:#3B4B59"></span></div>
-  <div class="comfort">وبنيناه على راحة ابنك: <span>قيلولة كل يوم</span><span>فطور 9:30</span><span>صفر واجبات منزلية</span><span>نتابع نومه شهريًا</span><span>لا منهج بديل: فصول المدرسة نفسها</span></div>
+  <div class="tlbar"><span style="flex:3.5;background:#1B9A8F"></span><span style="flex:1.3;background:#F6C453"></span><span style="flex:3.25;background:#0F5E58"></span><span style="flex:1.6;background:#7CC8BF"></span><span style="flex:2;background:#EE6A4D"></span><span style="flex:2.4;background:#8B7FD1"></span><span style="flex:1.6;background:#3B4B59"></span></div>
+  <div class="comfort">وبنيناه على راحة ابنك: <span>فطور 9:30</span><span>استراحة بعد الغداء</span><span>صفر واجبات منزلية</span><span>نتابع نومه شهريًا</span><span>لا منهج بديل: فصول المدرسة نفسها</span></div>
 </section>
 
 <!-- 9 المخرجات -->
-<section class="slide warm" data-notes="لا تقل: سيصبح ممتازًا. قل ما يُرى: يحفظ، يتفوّق، يقف أمام الناس، يستخدم الذكاء الاصطناعي بوعي. عند بطاقتي المهارات اقرأ الأمثلة واحدًا واحدًا؛ الآباء يبحثون عن هذه الكلمات بالذات.">
+<section class="slide warm" data-notes="لا تقل: سيصبح ممتازًا. قل ما يُرى ويُعدّ. ابدأ بالشريط الرقمي في الأعلى واقرأ الأرقام ببطء. ثم الأعمدة الثلاثة: ما يحفظه ويعلمه، القيم التي تصير سلوكًا، والمهارات التي يتقنها. الآباء يبحثون عن هذه الكلمات بالذات.">
   <div class="blob" style="left:-8vw;top:-12vh;width:28vw;height:28vw;background:rgba(207,240,236,.8)"></div>
   <span class="eyebrow">المخرجات</span>
   <h2>ما سيخرج به ابنك</h2>
-  <div class="grid g3">
-    <div class="card pop"><div class="ico">📗</div><h3>القرآن</h3><p>يحفظ بمسار فردي من سنة إلى ثلاث، ويثبّته بالمراجعة، ويتلو بإتقان.</p></div>
-    <div class="card pop"><div class="ico">🕋</div><h3>العلم</h3><p>يعرف أصول دينه، ويشرحها بلغته، ويفرّق بين الحكم ودليله.</p></div>
-    <div class="card pop"><div class="ico">💛</div><h3>مكارم الأخلاق</h3><p>صادق ومؤدّب ومسؤول، يعتذر حين يخطئ، ويُنجز ما كُلّف به بلا تذكير.</p></div>
-    <div class="card pop"><div class="ico">💻</div><h3>مهارات العصر</h3><p>متمكّن من أدوات زمانه، يستخدمها بوعي وأمان:</p><div class="tags"><span>الذكاء الاصطناعي</span><span>البحث والتحقق</span><span>العروض الرقمية</span><span>التقنية الآمنة</span></div></div>
-    <div class="card pop"><div class="ico">🎤</div><h3>المهارات الناعمة</h3><p>ما يصنع القائد في أي مجال:</p><div class="tags"><span>الإلقاء أمام الجمهور</span><span>العمل ضمن فريق</span><span>حلّ المشكلات</span><span>تنظيم الوقت</span><span>القيادة</span></div></div>
-    <div class="card pop"><div class="ico">🏅</div><h3>التفوّق الدراسي</h3><p>يحافظ على نسب عالية في دراسته، ويشارك في المسابقات، ويتميّز عن أقرانه.</p></div>
+  <div class="numrow">
+    <div><b>1–3</b><span>سنوات لختم القرآن</span></div>
+    <div><b>≈500</b><span>ساعة قرآن في السنة</span></div>
+    <div><b>≈320</b><span>ساعة علم شرعي للعليا</span></div>
+    <div><b>≈150</b><span>ساعة مهارات ومشروعات</span></div>
+    <div><b>85%</b><span>حدّ الإتقان</span></div>
+    <div><b>32</b><span>تقريرًا للأسرة في السنة</span></div>
+    <div><b>3</b><span>معارض يعرض فيها إنجازه</span></div>
+  </div>
+  <div class="grid g3" style="margin-top:2vh">
+    <div class="card pop"><div class="ico">📗</div><h3>قرآن وعلم</h3><p>يحفظ بخطة فردية ويثبّت بالمراجعة ويتلو بإتقان، ويعرف أصول دينه ويشرحها بلغته، ويتفوّق في دراسته.</p></div>
+    <div class="card pop"><div class="ico">💛</div><h3>قيم تصير سلوكًا</h3><p>قيمة كل شهر تُغرس وتُرصد:</p><div class="tags"><span>الصدق</span><span>الأمانة</span><span>الانضباط</span><span>احترام الوقت</span><span>برّ الوالدين</span><span>الاستئذان</span><span>النظافة</span><span>المسؤولية</span><span>الإتقان</span><span>التعاون</span></div></div>
+    <div class="card pop"><div class="ico">🧠</div><h3>مهارات يتقنها</h3><p>مهارات العصر والمهارات الناعمة:</p><div class="tags"><span>الذكاء الاصطناعي</span><span>التقنية الآمنة</span><span>البحث والتحقق</span><span>العروض الرقمية</span><span>الإلقاء أمام الجمهور</span><span>العمل ضمن فريق</span><span>حلّ المشكلات</span><span>تنظيم الوقت</span><span>القيادة</span><span>التفكير السليم</span></div></div>
   </div>
 </section>
 
@@ -538,7 +548,7 @@
   <span class="eyebrow">نجيب قبل أن تسألوا</span>
   <h2>أسئلتكم قبل أن تسألوها</h2>
   <div class="faq">
-    <div><b>اليوم طويل، ألا يُرهق ابني؟</b><span>بنيناه على ذلك: قيلولة كل يوم، وفطور 9:30، وصفر واجبات، وينصرف الجميع 6:00 مساءً، ونتابع ساعات نومه شهريًا.</span></div>
+    <div><b>اليوم طويل، ألا يُرهق ابني؟</b><span>بنيناه على ذلك: فطور 9:30، واستراحة بعد الغداء، وصفر واجبات، وينصرف الجميع 6:00 مساءً، ونتابع ساعات نومه شهريًا.</span></div>
     <div><b>6:00 صباحًا كل يوم؟</b><span>نعم، البداية المبكرة جوهر البرنامج لا تفصيلًا فيه. مهلة 10 دقائق، ومن تأخر أكثر يدخل الفترة الأكاديمية مباشرة ولا يُحرم منها أبدًا.</span></div>
     <div><b>هل يؤثر على دراسته؟</b><span>لا؛ الفترة الأكاديمية كاملة في فصول المدرسة النظامية، ونتابع تحصيله فيها، ولا منهج بديل.</span></div>
     <div><b>ماذا لو تعثّر أو لم يتكيّف؟</b><span>خطة دعم فردية مكتوبة ستة أسابيع بمشاركتكم، وإعادة قياس. لا يُستبعد طالب إلا بعد محاولة موثّقة وقرار مكتوب.</span></div>
